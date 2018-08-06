@@ -13,8 +13,19 @@
     <%= form.label :body %>
     <%= form.text_area :body, id: :blog_body %>
   </div>
+  
+  <ul>
+    <%= form.fields_for :technologies do |tecnology_form|%>
+      <li>   
+      <%= tecnology_form.label :name %>
+      <%= tecnology_form.text_field :name %>
+       </li>
+    <% end %>
+  </ul>
+
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
