@@ -88,7 +88,31 @@ ActiveRecord::Schema.define(version: 20180806181831) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
+  create_table "informe_rutinas", force: :cascade do |t|
+    t.integer "squatB", default: 0
+    t.integer "squatM", default: 0
+    t.integer "levantamientoPiernaRB", default: 0
+    t.integer "levantamientoPiernaRM", default: 0
+    t.integer "levantamientoPiernaLB", default: 0
+    t.integer "levantamientoPiernaLM", default: 0
+    t.integer "zancadaRB", default: 0
+    t.integer "zancadaRM", default: 0
+    t.integer "zancadaLB", default: 0
+    t.integer "zancadaLM", default: 0
+    t.integer "deadLiftRB", default: 0
+    t.integer "deadLiftRM", default: 0
+    t.integer "deadLiftLB", default: 0
+    t.integer "deadLifLM", default: 0
+    t.integer "estocadaRB", default: 0
+    t.integer "estocadaRM", default: 0
+    t.integer "estocadaLB", default: 0
+    t.integer "estocadaLM", default: 0
+    t.integer "tijeraB", default: 0
+    t.integer "tijeraM", default: 0
+    t.integer "idPaciente"
+    t.integer "idRutina"
+    t.datetime "fecha"
+  end
   add_foreign_key "blogs", "topics"
   add_foreign_key "technologies", "portfolios"
 end
